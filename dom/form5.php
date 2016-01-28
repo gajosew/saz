@@ -32,6 +32,7 @@ $conn->error . "<br><br>";
       <option value="PHP">PHP</option>
       <option value="MySQL">MySQL</option>
       <option value="i cos">i cos</option>
+       <option value="cosnowe">cosnowe</option>
   </select>
   <br><br>
   <input name="myBtn" type="submit">
