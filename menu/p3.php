@@ -5,15 +5,16 @@ if(isset($_POST['skills'])){
 	$conn = new mysqli($hn, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
 	$skillsArray = $_POST['skills'];
+        $data_koniec = $_POST['data_koniec'];
 	// echo $skillsArray; // Echos the "Array" object
 	$i = 0;
 	foreach ($skillsArray as $key => $value) { 
         $i++;
         echo "Skill $i || Array Key = $key || Value = $value<br />"; 
 		$query = "INSERT INTO kwiatki VALUES" .
-"(NULL,'$value', '2015-01-01')";
+"(NULL,'$value', '$data_koniec')";
 $result = $conn->query($query);
-if (!$result) echo "Instrukcja INSERT nie powiod�a si�: $query<br>" .
+if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
     }
 	exit();
@@ -24,7 +25,8 @@ $conn->error . "<br><br>";
   What skills do you have? <br>
   (hold "Ctrl" key to select multiple):
   <br><br>
-  <select name="skills[]" multiple="multiple">
+  <input type="date" name="data_koniec" value="2010-10-10" />
+  <select name="skills[]" size="6" multiple="multiple">
       <option value="HTML5">HTML5</option>
       <option value="CSS3">CSS3</option>
       <option value="Javascript">Javascript</option>
