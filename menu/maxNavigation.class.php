@@ -7,6 +7,7 @@
 	// Sub menu items
 	$subMenu['Projects']['Product-1'] = 'product1.php';
 	$subMenu['Projects']['Product-2'] = 'product2.php';
+        $subMenu['Projects']['Product-3'] = 'product3.php';
 	
 	$subMenu['About us']['Staff-1']   = 'staff1.php';
 
