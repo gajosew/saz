@@ -20,7 +20,7 @@ $conn->error . "<br><br>";
 }
 ?>
 <h3>Multiple Select HTML Form List PHP Parsing Tutorial</h3>
-<form action="p3.php" method="post" name="myform">
+<form action="product3.php" method="post" name="myform">
   What skills do you have? <br>
   (hold "Ctrl" key to select multiple):
   <br><br>
