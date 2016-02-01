@@ -25,7 +25,8 @@ $conn->error . "<br><br>";
   What skills do you have? <br>
   (hold "Ctrl" key to select multiple):
   <br><br>
-  <input type="date" name="data_koniec" value="2010-10-10" />
+  <input type="date" name="data_koniec" value="2016-01-01" max="2016-02-20" />
+   <input type="date" name="data_pocztek" value="<?php echo date('Y-m-d'); ?>" max="2016-02-20" />
   <select name="skills[]" size="6" multiple="multiple">
       <option value="HTML5">HTML5</option>
       <option value="CSS3">CSS3</option>
