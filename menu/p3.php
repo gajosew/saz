@@ -26,7 +26,7 @@ $conn->error . "<br><br>";
   (hold "Ctrl" key to select multiple):
   <br><br>
   <input type="date" name="data_koniec" value="2016-01-01" max="2016-02-20" />
-   <input type="date" name="data_poczatek" value="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d','+1 year'); ?>" />
+   <input type="date" name="data_pocztek" value="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime ("+180 day"));  ?>" />
   <select name="skills[]" size="6" multiple="multiple">
       <option value="HTML5">HTML5</option>
       <option value="CSS3">CSS3</option>
