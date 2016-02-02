@@ -16,7 +16,7 @@
       <!-- Navigation and sidebar END -->
 
       
-      <div id="main">This is a test site to demonstarte Max's Navigation System<br/><h1>HOME</h1></div>
-      <div id="footer"><a href="http://www.phpf1.com">Powered by PHP F1</a></div>
+      <div id="main">SAZ<br/><h1>HOME</h1></div>
+      <div id="footer">Powered by GAJOSEW</a></div>
    </div>
 </body>   

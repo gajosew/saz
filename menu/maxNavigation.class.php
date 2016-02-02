@@ -1,13 +1,13 @@
 <?php
 	// Main menu items
 	$mainMenu['Home']      = 'index.php';
-	$mainMenu['Projects']  = 'projects.php';
-	$mainMenu['About us']  = 'about.php';
+	$mainMenu['Zlecenia']  = 'projects.php';
+	$mainMenu['Szukaj']  = 'about.php';
 	
 	// Sub menu items
-	$subMenu['Projects']['Product-1'] = 'product1.php';
-	$subMenu['Projects']['Product-2'] = 'product2.php';
-        $subMenu['Projects']['Product-3'] = 'product3.php';
+	$subMenu['Zlecenia']['Zlecenia-1'] = 'product1.php';
+	$subMenu['Zlecenia']['Zlecenia-2'] = 'product2.php';
+        $subMenu['Zlecenia']['Zlecenia-3'] = 'product3.php';
 	
 	$subMenu['About us']['Staff-1']   = 'staff1.php';
 

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <title>Max's Navigation System</title>
+   <title>SAZ</title>
    <link href="style/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
    <div id="container">
-      <div id="header"><div id="header_left"></div><div id="header_main">Max's Navigation System</div><div id="header_right"></div></div>
+      <div id="header"><div id="header_left"></div><div id="header_main">SAZ</div><div id="header_right"></div></div>
 
       
       <!-- This is the left sidebar with navigation BEGIN -->
@@ -16,7 +16,7 @@
       <!-- Navigation and sidebar END -->
 
       
-      <div id="main">This is a test site to demonstarte Max's Navigation System<br/><h1>PROJECTS</h1></div>
-      <div id="footer"><a href="http://www.phpf1.com">Powered by PHP F1</a></div>
+      <div id="main">SAZ<br/><h1>PROJECTS</h1></div>
+      <div id="footer">Powered by GAJOSEW</a></div>
    </div>
 </body>   
