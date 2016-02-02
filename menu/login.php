@@ -1,6 +1,6 @@
 <?php // login.php
 $hn = 'localhost';
-$db = 'serwis';
+$db = 'rejestr';
 $un = 'root';
 $pw = 'qaz123WSX';
 ?>
