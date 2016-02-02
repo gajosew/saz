@@ -8,7 +8,7 @@
 
 <body>
    <div id="container">
-      <div id="header"><div id="header_left"></div><div id="header_main">Max's Navigation System</div><div id="header_right"></div></div>
+      <div id="header"><div id="header_left"></div><div id="header_main">SAZ</div><div id="header_right"></div></div>
 
       
       <!-- This is the left sidebar with navigation BEGIN -->
