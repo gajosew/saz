@@ -48,7 +48,7 @@ $conn->error . "<br><br>";
        <option value="cosnowe">cosnowe</option>
   </select>
   
-   <textarea name="tresc" rows="8" cols="40">Tresc.
+   <textarea name="tresc" rows="8" cols="40">Tresc...
   </textarea>
   <br><br>
   <input name="myBtn" type="submit">
