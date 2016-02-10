@@ -13,8 +13,8 @@ if ($conn->connect_error) die($conn->connect_error);
 	$mail_dn = $_SESSION['mail_dn'];
 	
 	$query = "INSERT INTO usery VALUES" .
-"(NULL,'$login_dn', '$cn_dn', '$mail_dn', '$manager_dn', '$department_dn')";
+"(NULL,'$login_dn', '$cn_dn', '$mail_dn', '$manager_dn', '$department_dn','0')";
 $result = $conn->query($query);
-if (!$result) echo "Instrukcja INSERT nie powiod³a siê: $query<br>" .
+if (!$result) echo "Instrukcja INSERT nie powiodï¿½a siï¿½: $query<br>" .
 $conn->error . "<br><br>";
 ?>
