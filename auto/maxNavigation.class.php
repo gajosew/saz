@@ -3,7 +3,7 @@
 	$mainMenu['Home']      = 'index.php';
 	$mainMenu['Zlecenia']  = 'projects.php';
 	$mainMenu['Szukaj']  = 'about.php';
-	
+	$mainMenu['Wyloguj']  = 'wyloguj.php';
 	// Sub menu items
 	$subMenu['Zlecenia']['Zlecenia-1'] = 'product1.php';
 	$subMenu['Zlecenia']['Zlecenia-2'] = 'product2.php';
