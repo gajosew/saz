@@ -15,6 +15,6 @@ if ($conn->connect_error) die($conn->connect_error);
 	$query = "INSERT INTO usery VALUES" .
 "(NULL,'$login_dn', '$cn_dn', '$mail_dn', '$manager_dn', '$department_dn','0')";
 $result = $conn->query($query);
-if (!$result) echo "Instrukcja INSERT nie powiod�a si�: $query<br>" .
+if (!$result) echo "Nie mozna dodac uzytkownika :-( $query<br>" .
 $conn->error . "<br><br>";
 ?>
