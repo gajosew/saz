@@ -12,7 +12,7 @@ if ($conn->connect_error) die($conn->connect_error);
 	$manager_dn = $_SESSION['manager_dn'];
 	$mail_dn = $_SESSION['mail_dn'];
        $dn_dn = $_SESSION['dn_dn'];
-	
+	//ignore sprawdza czy istnieje uz taki rekord jesli tak nie wstawia identycznego
 	$query = "INSERT IGNORE INTO usery VALUES" .
 "('$login_dn', '$cn_dn', '$mail_dn', '$manager_dn', '$department_dn','$dn_dn','0') ";
 $result = $conn->query($query);

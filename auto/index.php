@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['login_dn']))
 {
-  echo "okej";  
+    
 }
 else header('Location:l2.php');
 ?>

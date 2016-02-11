@@ -4,4 +4,3 @@ $db = 'rejestr';
 $un = 'root';
 $pw = 'qaz123WSX';
 ?>
-Przepisz

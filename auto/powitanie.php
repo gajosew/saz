@@ -11,7 +11,7 @@ if (isset($_SESSION['login_dn']))
         //echo $login_dn ,'<br>';
         echo $cn_dn ,'(',$login_dn,')', '<br>';
         echo $department_dn ,'<br>';
-        echo $manager_dn ,'<br>';
+        //echo $manager_dn ,'<br>';
 }
 else header('Location:l2.php');
 ?>

@@ -1,5 +1,14 @@
 <?php
-// Written by Adam @ DevelopPHP.com
+session_start();
+if (isset($_SESSION['login_dn']))
+{
+    
+}
+else header('Location:l2.php');
+?>
+
+<?php
+
 if(isset($_POST['skills'])){
 	require_once 'login.php';
 	$conn = new mysqli($hn, $un, $pw, $db);
@@ -37,16 +46,27 @@ $conn->error . "<br><br>";
   Do:<input type="date" name="data_poczatek" value="<?php echo date('Y-m-d', strtotime ("+180 day"));  ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d', strtotime ("+180 day"));  ?>" />
   <br> <br>
   Dla:
-  <select name="skills[]" size="6" multiple="multiple">
-      <option value="HTML5">HTML5</option>
-      <option value="CSS3">CSS3</option>
-      <option value="Javascript">Javascript</option>
-      <option value="Actionscript">Actionscript</option>
-      <option value="PHP">PHP</option>
-      <option value="MySQL">MySQL</option>
-      <option value="i cos">i cos</option>
-       <option value="cosnowe">cosnowe</option>
-  </select>
+ <?php //pobranie do listy wyboru pracownikow
+  require_once 'login.php';
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT * FROM `usery`";
+
+$result1 = mysqli_query($conn, $query);
+
+  ?>
+   <select name="skills[]" size="6" multiple="multiple">
+
+            <?php while($row1 = mysqli_fetch_array($result1)):;?>
+
+            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+  
+  
   
    <textarea name="tresc" rows="8" cols="40">Tresc.
   </textarea>
