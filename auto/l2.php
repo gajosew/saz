@@ -52,6 +52,7 @@ $f = $g.$e;
 			$mail_dn = $info[$i]["mail"][0];
 			$department_dn = $info[$i]["department"][0];
 			$manager_dn = $info[$i]["manager"][0];
+                        $dn_dn = $info[$i]["dn"];
 			//$mail      = 'daniel.golebiewski@bsb.com.pl';
 			echo $login_dn,$mail_dn,$f; 
 			$subject = 'SAZ - Nowy Wniosek o Dostep';
@@ -72,6 +73,7 @@ mail($mail_dn, $subject, $message, $headers);
 		$_SESSION['department_dn'] = $department_dn;
 		$_SESSION['manager_dn'] = $manager_dn;
 		$_SESSION['mail_dn'] = $mail_dn;
+                $_SESSION['dn_dn'] = $dn_dn;
 		header('Location:seconlogin.php');
 		//header('Location:2.php');
 

@@ -24,7 +24,7 @@ else header('Location:l2.php');
       <!-- Navigation and sidebar END -->
 
       
-      <div id="main">SAZ<br/><h1>HOME</h1></div>
+      <div id="main"><?php include('powitanie.php'); ?></div>
       <div id="footer">Powered by GAJOSEW</a></div>
    </div>
 </body>   
