@@ -72,7 +72,7 @@ mail($mail_dn, $subject, $message, $headers);
 		$_SESSION['department_dn'] = $department_dn;
 		$_SESSION['manager_dn'] = $manager_dn;
 		$_SESSION['mail_dn'] = $mail_dn;
-		header('Location:index.php');
+		header('Location:seconlogin.php');
 		//header('Location:2.php');
 
         }
