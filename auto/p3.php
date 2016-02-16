@@ -2,7 +2,9 @@
 session_start();
 if (isset($_SESSION['login_dn']))
 {
-    
+  $login_dn = $_SESSION['login_dn'];
+	$cn_dn = $_SESSION['cn_dn'];   
+        $department_dn = $_SESSION['department_dn'];
 }
 else header('Location:l2.php');
 ?>
@@ -51,16 +53,18 @@ $conn->error . "<br><br>";
 $conn = new mysqli($hn, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
 
-$query = "SELECT * FROM `usery`";
+$query = "SELECT * FROM usery WHERE departmend = '$department_dn' and  userylogin != '$login_dn';";
 
 $result1 = mysqli_query($conn, $query);
 
   ?>
-   <select name="skills[]" size="6" multiple="multiple">
-
+  
+  <select name="skills[]" size="6" multiple="multiple">
+ <option value="<?php echo $login_dn;?>" selected="selected"><?php echo $cn_dn;?></option> //wstawienie nazwiska aktualnie zalogowanego usera
             <?php while($row1 = mysqli_fetch_array($result1)):;?>
 
-            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+      
+       <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
 
             <?php endwhile;?>
 
