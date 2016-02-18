@@ -30,6 +30,10 @@ $result = $conn->query($query);
 if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
     }
+    	$query2 = "INSERT INTO obieg VALUES" .
+"('$tresc','$login_dn')";
+$result = $conn->query($query2);
+    echo dupa;
 	exit();
 }
 ?>
