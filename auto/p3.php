@@ -37,6 +37,8 @@ $result = $conn->query($query2);
 	exit();
 }
 ?>
+
+
 <h3>Zlecenie dotyczy</h3>
 <form action="product3.php" method="post" name="myform">
    
