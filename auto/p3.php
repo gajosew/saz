@@ -16,6 +16,7 @@ if(isset($_POST['skills'])){
 	$conn = new mysqli($hn, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
 	$up_do = $_POST['up_do'];
+        $tresc = $_POST['tresc'];
         $skillsArray = $_POST['skills'];
         $data_koniec = $_POST['data_koniec'];
 	// echo $skillsArray; // Echos the "Array" object
@@ -24,7 +25,7 @@ if ($conn->connect_error) die($conn->connect_error);
         $i++;
         echo "Skill $i || Array Key = $key || Value = $value<br />"; 
 		$query = "INSERT INTO zlecenia VALUES" .
-"(NULL,'$up_do', '$data_koniec','$data_koniec','$value')";
+"(NULL,'$up_do', '$data_koniec','$data_koniec','$value','$tresc','$login_dn')";
 $result = $conn->query($query);
 if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
