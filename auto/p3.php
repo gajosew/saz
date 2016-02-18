@@ -15,7 +15,8 @@ if(isset($_POST['skills'])){
 	require_once 'login.php';
 	$conn = new mysqli($hn, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
-	$skillsArray = $_POST['skills'];
+	$up_do = $_POST['up_do'];
+        $skillsArray = $_POST['skills'];
         $data_koniec = $_POST['data_koniec'];
 	// echo $skillsArray; // Echos the "Array" object
 	$i = 0;
@@ -23,7 +24,7 @@ if ($conn->connect_error) die($conn->connect_error);
         $i++;
         echo "Skill $i || Array Key = $key || Value = $value<br />"; 
 		$query = "INSERT INTO zlecenia VALUES" .
-"(NULL,'$value', '$data_koniec','$data_koniec')";
+"(NULL,'$up_do', '$data_koniec','$data_koniec','$value')";
 $result = $conn->query($query);
 if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
@@ -36,7 +37,7 @@ $conn->error . "<br><br>";
    
   <br>
  
-<select name="thelist" onChange="combo(this, 'theinput')" onMouseOut="comboInit(this, 'theinput')" >
+<select name="up_do" onChange="combo(this, 'theinput')" onMouseOut="comboInit(this, 'theinput')" >
   <option>SVN</option>
   <option>Zlecenie nadania uprawnien </option>
   <option>Inne</option>
