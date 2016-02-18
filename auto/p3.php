@@ -15,6 +15,7 @@ if(isset($_POST['skills'])){
 	require_once 'login.php';
 	$conn = new mysqli($hn, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
+        $numerek = $_POST['numerek'];
 	$up_do = $_POST['up_do'];
         $tresc = $_POST['tresc'];
         $skillsArray = $_POST['skills'];
@@ -38,6 +39,25 @@ $result = $conn->query($query2);
 }
 ?>
 
+//last id begin
+
+<h3>Zlecenie dotyczy</h3>
+<form action="product3.php" method="post" name="myform">
+<?php //pobranie do listy wyboru pracownikow
+  require_once 'login.php';
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT * FROM zlecenia WHERE id = (SELECT MAX(id) from zlecenia)   ;";
+
+$result3 = mysqli_query($conn, $query);
+
+  while($row3 = mysqli_fetch_array($result3))
+            echo $row3[0];
+  $numerek=$row3[0]+1;
+            ?>
+
+//last id end
 
 <h3>Zlecenie dotyczy</h3>
 <form action="product3.php" method="post" name="myform">
