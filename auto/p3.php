@@ -26,7 +26,7 @@ if ($conn->connect_error) die($conn->connect_error);
         $i++;
         echo "Skill $i || Array Key = $key || Value = $value<br />"; 
 		$query = "INSERT INTO zlecenia VALUES" .
-"(NULL,'$up_do', '$data_koniec','$data_koniec','$value','$tresc','$login_dn')";
+"(NULL,'$up_do', '$data_koniec','$data_koniec','$value','$tresc','$login_dn','$numerek')";
 $result = $conn->query($query);
 if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
@@ -53,14 +53,16 @@ $query = "SELECT * FROM zlecenia WHERE id = (SELECT MAX(id) from zlecenia)   ;";
 $result3 = mysqli_query($conn, $query);
 
   while($row3 = mysqli_fetch_array($result3))
-            echo $row3[0];
-  $numerek=$row3[0]+1;
+            //echo $row3[0];
+            $last = $row3[0];
+  
+  echo $last;
+ 
             ?>
 
 //last id end
 
-<h3>Zlecenie dotyczy</h3>
-<form action="product3.php" method="post" name="myform">
+
    
   <br>
  
