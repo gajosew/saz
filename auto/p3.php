@@ -57,7 +57,7 @@ $result3 = mysqli_query($conn, $query);
             $last = $row3[0];
   
   echo $last;
- 
+ echo'<input type="hidden" name="numerek" value='.$last.' />';
             ?>
 
 //last id end
