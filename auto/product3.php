@@ -17,6 +17,6 @@
 
       
       <div id="main"><?php include('p3.php'); ?></div>
-      <div id="footer">Powered by GAJOSEW</a></div>
+      <div id="footer">Powered by Unicorn Herding</a></div>
    </div>
 </body>   

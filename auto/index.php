@@ -25,6 +25,6 @@ else header('Location:l2.php');
 
       
       <div id="main"><?php include('powitanie.php'); ?></div>
-      <div id="footer">Powered by GAJOSEW</a></div>
+      <div id="footer">Powered by Unicorn Herding</a></div>
    </div>
 </body>   
