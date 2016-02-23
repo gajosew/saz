@@ -32,14 +32,14 @@ if (!$result) echo "Instrukcja INSERT noabla: $query<br>" .
 $conn->error . "<br><br>";
     }
     	$query2 = "INSERT INTO stan VALUES" .
-"('$tresc','$login_dn','$numerek',now(),NULL)";
+"('$up_do','$tresc','$login_dn','$numerek',now(),NULL)";
 $result = $conn->query($query2);
     echo dupa;
 	exit();
 }
 ?>
 
-//last id begin
+
 
 <h3>Zlecenie dotyczy</h3>
 <form action="product3.php" method="post" name="myform">
@@ -55,15 +55,10 @@ $result3 = mysqli_query($conn, $query);
   while($row3 = mysqli_fetch_array($result3))
             //echo $row3[0];
             $last = $row3[0];
-  
-  echo $last;
+    //echo $last;
  echo'<input type="hidden" name="numerek" value='.$last.' />';
             ?>
 
-//last id end
-
-
-   
   <br>
  
 <select name="up_do" onChange="combo(this, 'theinput')" onMouseOut="comboInit(this, 'theinput')" >

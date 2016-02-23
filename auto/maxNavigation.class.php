@@ -5,8 +5,8 @@
 	$mainMenu['Szukaj']  = 'about.php';
 	$mainMenu['Wyloguj']  = 'wyloguj.php';
 	// Sub menu items
-	$subMenu['Zlecenia']['Zlecenia-1'] = 'product1.php';
-	$subMenu['Zlecenia']['Zlecenia-2'] = 'product2.php';
+	$subMenu['Zlecenia']['Aktualne'] = 'product1.php';
+	$subMenu['Zlecenia']['Oczekujace'] = 'product2.php';
         $subMenu['Zlecenia']['Nowe'] = 'product3.php';
 	
 	$subMenu['About us']['Staff-1']   = 'staff1.php';
