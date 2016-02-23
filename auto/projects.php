@@ -17,6 +17,6 @@
 
       
       <div id="main">SAZ<br/><h1>PROJECTS</h1></div>
-      <div id="footer">Powered by GAJOSEW</a></div>
+      <div id="footer">Powered by Unicorn Herding</a></div>
    </div>
 </body>   
