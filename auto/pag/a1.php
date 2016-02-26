@@ -17,7 +17,7 @@
         $row = mysql_fetch_array($result);
         extract($row);
         
-        $onpage = 5; //ilość newsów na stronę
+        $onpage = 10; //ilość newsów na stronę
         $navnum = 7; //ilość wyświetlanych numerów stron, ze względów estetycznych niech będzie to liczba nieparzysta
         $allpages = ceil($all_posts/$onpage); //wszysttkie strony to zaokrąglony w górę iloraz wszystkich postów i ilości postów na stronę
         
@@ -33,8 +33,10 @@
         $result = mysql_query($query) or die (mysql_error());
         
         while($row = mysql_fetch_array($result)){
-                echo "<h1>".$row['up_do']."</h1>";
-                echo "<p>".$row['co']."</p>";
+              
+            
+            echo $row['up_do'];
+                echo $row['co'];
                 echo "<hr>";
         }
         
@@ -84,9 +86,5 @@
 ?>
 </body>
 </html>
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 

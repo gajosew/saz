@@ -16,7 +16,7 @@
       <!-- Navigation and sidebar END -->
 
       
-      <div id="main">SAZ<br/><h1>PRODUCT - 1</h1></div>
-      <div id="footer">Powered by GAJOSEW</a></div>
+     <div id="main"><?php include('a1.php'); ?></div>
+      <div id="footer">Powered by Unicorn Herding</a></div>
    </div>
 </body>   

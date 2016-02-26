@@ -2,13 +2,14 @@
 #nav ul {
         list-style-type:none;  
         float:left; 
-        position:relative; 
+        
         left:50%;
 }
 #nav li {
-        float:left; 
-        margin:0 5px; 
-        position:relative; 
+   
+    float:left; 
+        margin:0 3px; 
+        font-size:small;
         right:50%; 
 }
 #nav li.current a{

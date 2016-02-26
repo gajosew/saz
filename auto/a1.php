@@ -69,7 +69,7 @@
         //ten fragment z kolei odpowiada za wyślwietenie naszej nawigacji
         echo "<div id=\"nav\"><ul>";
         if($page > 1) echo "<li><a href=\"".$script_name."?page=".$prev."\">Poprzednia</a></li>";
-        if ($forstart > 1) echo "<li><a href=\"".$script_name."?page=1\">[1]</a></li>";
+        if ($forstart > 1) echo "<a href=\"".$script_name."?page=1\">[1]</a>";
         if ($forstart > 2) echo "<li>...</li>";
         for($forstart; $forstart < $forend; $forstart++){
                 if($forstart == $page){

@@ -1,4 +1,16 @@
 <?php
+session_start();
+if (isset($_SESSION['login_dn']))
+{
+  $login_dn = $_SESSION['login_dn'];
+	$cn_dn = $_SESSION['cn_dn'];   
+        $department_dn = $_SESSION['department_dn'];
+        $mail_dn = $_SESSION['mail_dn'];
+        $manager_dn = $_SESSION['manager_dn'];
+}
+else header('Location:l2.php');
+?>
+<?php
 	// Main menu items
 	$mainMenu['Home']      = 'index.php';
 	$mainMenu['Zlecenia']  = 'projects.php';

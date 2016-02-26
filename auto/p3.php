@@ -5,6 +5,8 @@ if (isset($_SESSION['login_dn']))
   $login_dn = $_SESSION['login_dn'];
 	$cn_dn = $_SESSION['cn_dn'];   
         $department_dn = $_SESSION['department_dn'];
+        $mail_dn = $_SESSION['mail_dn'];
+        $manager_dn = $_SESSION['manager_dn'];
 }
 else header('Location:l2.php');
 ?>
@@ -35,6 +37,33 @@ $conn->error . "<br><br>";
 "('$up_do','$tresc','$login_dn','$numerek',now(),NULL)";
 $result = $conn->query($query2);
     echo dupa;
+    
+    
+require_once 'login.php';
+$conn = new mysqli($hn, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
+
+$query = "SELECT mail FROM usery WHERE dn = '$manager_dn'   ;";
+
+$result4 = mysqli_query($conn, $query);
+
+  while($row4 = mysqli_fetch_array($result4))
+            //echo $row3[0];
+            $last = $row4[0];
+    echo $last;
+ //echo'<input type="hidden" name="numerek" value='.$last.' />';
+    
+    $subject = 'SAZ - Nowy Wniosek o Dostep';
+$message = "Wygenerowano nowy wniosek od ".$mail_dn."\nNie odpowiadaj na tego maila";
+$headers = 'From: robot@saz.bsb.com.pl' . "\r\n" .
+   // session_register("mail_dn");
+   //session_register("gracz");
+  
+		//header('Location:jestes.php');
+    'X-Mailer: PHP/' . phpversion();
+
+mail($last, $subject, $message, $headers);
+    
 	exit();
 }
 ?>

@@ -16,7 +16,7 @@ if ($conn->connect_error) die($conn->connect_error);
 	$query = "INSERT IGNORE INTO usery VALUES" .
 "('$login_dn', '$cn_dn', '$mail_dn', '$manager_dn', '$department_dn','$dn_dn','0') ";
 $result = $conn->query($query);
-header('Location:index.php');
+header('Location:trologin.php');
 if (!$result) echo "Nie mozna dodac uzytkownika :-( $query<br>" .
 $conn->error . "<br><br>";
 ?>
