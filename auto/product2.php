@@ -16,7 +16,7 @@
       <!-- Navigation and sidebar END -->
 
       
-      <div id="main">SAZ<br/><h1>PRODUCT - 2</h1></div>
+      <div id="main"><?php include('o1.php'); ?></div>
       <div id="footer">Powered by GAJSOEW</a></div>
    </div>
 </body>   
