@@ -15,16 +15,16 @@ else header('Location:l2.php');
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-    <title>Expand table rows with jQuery - jExpand plugin - JankoAtWarpSpeed demos</title>
+    <title></title>
     <style type="text/css">
         body { font-family:Arial, Helvetica, Sans-Serif; font-size:0.8em;}
-        #report { border-collapse:collapse;}
+        #report {  border: none;border-collapse: collapse;}tr {border: 1px solid silver;}
         #report h4 { margin:0px; padding:0px;}
         #report img { float:right;}
         #report ul { margin:10px 0 10px 40px; padding:0px;}
         #report th { background:#7CB8E2 url(tablica/header_bkg.png) repeat-x scroll center left; color:#fff; padding:7px 15px; text-align:left;}
+        
         #report td { background:#C7DDEE none repeat-x scroll center left; color:#000; padding:7px 15px; }
-        #report tr.odd td { background:#fff url(tablica/row_bkg.png) repeat-x scroll center left; cursor:pointer; }
         #report div.arrow { background:transparent url(tablica/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
         #report div.up { background-position:0px 0px;}
     </style>
@@ -44,7 +44,7 @@ else header('Location:l2.php');
     </script>        
 </head>
 <body>
-        <p>Up do </p>
+        
     <table id="report">
         <tr>
             <th>Do</th>
@@ -52,11 +52,12 @@ else header('Location:l2.php');
             <th>Wystapil</th>
             <th>Wygenerowano</th>
             <th></th>
+             <th></th>
+              <th></th>
         </tr>
         
         <?php
-        
-        
+                
         $query = "SELECT * FROM stan ORDER BY stan_id ";
         $result = mysql_query($query) or die (mysql_error());
         
@@ -72,30 +73,48 @@ else header('Location:l2.php');
             <td>'.$row['co'].'</td>
             <td>'.$row['kto'].'</td>
             <td>'.$row['data_generacji'].'</td>
+              <td><a href="http://www.'.$nr.'">P</a></td>  
+                  <td><a href="http://www.'.$nr.'">O</a></td>  
+
+
+
             <td><div class="arrow"></div></td>
         </tr>';
        
         echo'<tr>';
         
         //echo $nr;
-         
+           echo'<td colspan="5">
+                <h5>Uprawnienia dla</h5>';
+         $queryp = "SELECT * FROM zlecenia WHERE numerek = '$nr' ";
+        $resultp = mysql_query($queryp) or die (mysql_error());
+        
+        while($rowp = mysql_fetch_array($resultp)){
+              
+            
+            echo $rowp['dla'];
+            echo ',';
+                //echo $rowp['co'];
+                //echo "<hr>";
         
         
-            echo'<td colspan="5">
-                <h5>Uprawnienia dla</h5>
-                <ul>
+        }
+               // echo'<ul>
                     //tutaj tresc
                     
-                 </ul>   
-            </td>';
+                 //</ul>   
+            echo'</td>';
         
        echo' </tr>';
+       
          }
         
         
         
     echo '</table>';
     echo '<em>*kliknij na strzalke dla szczegołów</em>';
+     echo '<em>P - przekaz do dalszej realizacji</em>';
+      echo '<em>O - odrzuc wniosek</em>';
                 ?>
 </body>
 </html>
