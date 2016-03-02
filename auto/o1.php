@@ -50,7 +50,7 @@ else header('Location:l2.php');
             <th>Do</th>
             <th>Tresc</th>
             <th>Wystapil</th>
-            <th>Data</th>
+            <th>Wygenerowano</th>
             <th></th>
         </tr>
         
@@ -66,9 +66,8 @@ else header('Location:l2.php');
             //echo $row['up_do'];
                // echo $row['co'];
                // echo "<hr>";
-        
-        
-        echo '<tr>
+        $nr = $row['numerek'];
+                echo '<tr>
             <td>'.$row['up_do'].'</td>
             <td>'.$row['co'].'</td>
             <td>'.$row['kto'].'</td>
@@ -76,17 +75,21 @@ else header('Location:l2.php');
             <td><div class="arrow"></div></td>
         </tr>';
        
-        echo'<tr>
-            <td colspan="5">
-                
-                <h4>Uprawnienia dla</h4>
+        echo'<tr>';
+        
+        //echo $nr;
+         
+        
+        
+            echo'<td colspan="5">
+                <h5>Uprawnienia dla</h5>
                 <ul>
-                    <li><a href="http://en.wikipedia.org/wiki/Usa">USA on Wikipedia</a></li>
-                    <li><a href="http://nationalatlas.gov/">National Atlas of the United States</a></li>
-                    <li><a href="http://www.nationalcenter.org/HistoricalDocuments.html">Historical Documents</a></li>
+                    //tutaj tresc
+                    
                  </ul>   
-            </td>
-        </tr>';
+            </td>';
+        
+       echo' </tr>';
          }
         
         
