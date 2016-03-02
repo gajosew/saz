@@ -55,17 +55,33 @@ else header('Location:l2.php');
             <th>Data</th>
             <th></th>
         </tr>';
+        
+        
+        $query = "SELECT * FROM stan ORDER BY stan_id ";
+        $result = mysql_query($query) or die (mysql_error());
+        
+        while($row = mysql_fetch_array($result)){
+              
+            
+            echo $row['up_do'];
+                echo $row['co'];
+                echo "<hr>";
+        
+        
+        
+        
         echo'<tr>
             
             
             
             
-            <td>United States of America</td>
+            <td>Uica</td>
             <td>306,939,000</td>
             <td>9,826,630 km2</td>
             <td>English</td>
             <td><div class="arrow"></div></td>
         </tr>';
+        }
         echo'<tr>
             <td colspan="5">
                 
@@ -80,7 +96,7 @@ else header('Location:l2.php');
                 
     echo'</table>';
                 ?>
-    <em>* Information taken from Wikipedia</em>
+    <em>* Mogą wystapic problemy</em>
 </body>
 </html>
 
