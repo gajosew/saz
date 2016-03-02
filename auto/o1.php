@@ -45,16 +45,16 @@ else header('Location:l2.php');
 </head>
 <body>
         <p>Up do </p>
-  
-       <?php 
-        echo'<table id="report">';
-        echo'<tr>
+    <table id="report">
+        <tr>
             <th>Do</th>
             <th>Tresc</th>
             <th>Wystapil</th>
             <th>Data</th>
             <th></th>
-        </tr>';
+        </tr>
+        
+        <?php
         
         
         $query = "SELECT * FROM stan ORDER BY stan_id ";
@@ -63,25 +63,19 @@ else header('Location:l2.php');
         while($row = mysql_fetch_array($result)){
               
             
-            echo $row['up_do'];
-                echo $row['co'];
-                echo "<hr>";
+            //echo $row['up_do'];
+               // echo $row['co'];
+               // echo "<hr>";
         
         
-        
-        
-        echo'<tr>
-            
-            
-            
-            
-            <td>Uica</td>
-            <td>306,939,000</td>
-            <td>9,826,630 km2</td>
-            <td>English</td>
+        echo '<tr>
+            <td>'.$row['up_do'].'</td>
+            <td>'.$row['co'].'</td>
+            <td>'.$row['kto'].'</td>
+            <td>'.$row['data_generacji'].'</td>
             <td><div class="arrow"></div></td>
         </tr>';
-        }
+       
         echo'<tr>
             <td colspan="5">
                 
@@ -93,10 +87,13 @@ else header('Location:l2.php');
                  </ul>   
             </td>
         </tr>';
-                
-    echo'</table>';
+         }
+        
+        
+        
+    echo '</table>';
+    echo '<em>*kliknij na strzalke dla szczegołów</em>';
                 ?>
-    <em>* Mogą wystapic problemy</em>
 </body>
 </html>
 
