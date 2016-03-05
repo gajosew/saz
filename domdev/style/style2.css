@@ -1,0 +1,21 @@
+
+#nav ul {
+        list-style-type:none;  
+        float:left; 
+        
+        left:50%;
+}
+#nav li {
+   
+    float:left; 
+        margin:0 3px; 
+        font-size:small;
+        right:50%; 
+}
+#nav li.current a{
+        color:#F00;
+}
+
+div.clear {
+        clear:both;
+}
