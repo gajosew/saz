@@ -28,7 +28,7 @@ else header('Location:l2.php');
         #report div.arrow { background:transparent url(tablica/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
         #report div.up { background-position:0px 0px;}
     </style>
-    <script src="https://saz/auto/tablica/jquery.min.js" type="text/javascript"></script>
+    <script src="http://192.168.0.27/domdev/tablica/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">  
         $(document).ready(function(){
             $("#report tr:odd").addClass("odd");
